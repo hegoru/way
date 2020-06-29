@@ -25,6 +25,8 @@ end
 # Procedure and functions are both using in programming.
 # Using of function or using of procedure depends on situation.
 #
+# There are results of it's execution.
+#
 summate_values 1, 2 # Summates and output calculated value
 
 summation = get_summation_of 1, 2 # Returns result of summation of values
