@@ -1,17 +1,38 @@
-# Method is your personal 
-# In other words: method is your personal executor
+# Method is a couple of instructions. 
+# In other words: method is a block of commands that executes one-by-one.
 #
-# Methods can return values (it called functions in other programming languages)
-# or just execute 
+# Method lets program to avoid repeat lines of code.
 #
-def convert_to_integer value # Converts to an Integer given value
-  Integer(value)
+def check_is_integer value # Converts to an Integer given value
+  value.kind_of? Integer
 end
 
-puts convert_to_integer 2.2
+puts check_is_integer 2
 
-# To make the name of method more understandable and compactive
+# There are few types of methods:
+# Function returns value.
+# Procedure just execute lines of code without return any value.
 #
-alias to_int convert_to_integer_and_output # Creates an alias (another name) for the method convert_to_integer_and_output
+def summate_values x, y # Procedure
+  sum = x + y
+  puts sum
+end
 
-puts to_int 2.2
+def get_summation_of x, y # Function
+  return x + y
+end
+
+# Procedure and functions are both using in programming.
+# Using of function or using of procedure depends on situation.
+#
+summate_values 1, 2 # Summates and output calculated value
+
+summation = get_summation_of 1, 2 # Returns result of summation of values
+puts summation
+
+# Alias is another name of the function.
+# Aliases make function names more short, understandable.
+#
+alias is_int check_is_integer # Creates an alias (another name) for the method check_is_integer
+
+puts is_int 2.2
