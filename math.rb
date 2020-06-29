@@ -1,4 +1,4 @@
-# Math is a library or a module for making mathematical functions
+# Math is a module for mathematical calculations.
 #
 # Tigonometric functions
 #
