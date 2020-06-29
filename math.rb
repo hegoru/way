@@ -1,6 +1,6 @@
-# Ruby provides Math module for  
+# Math is a library or a module for making mathematical functions
 #
-# Geometry
+# Tigonometric functions
 #
 puts Math.asin(0) # Returns the arc sine of x
 puts Math.acos(1) # Returns the arc cosine of x
@@ -39,4 +39,7 @@ puts Math.log(Math::E) # Returns the logarithm of x
 puts Math.log2(2) # Returns the base 2 logarithm of x
 puts Math.log10(10) # Returns the base 10 logarithm of x
 
+# Roots
+#
 puts Math.sqrt(4) # Returns the non-negative square root of x
+puts Math.cbrt(9) # Returns the non-negative square root of x
