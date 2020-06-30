@@ -1,4 +1,4 @@
-# Math is a module for mathematical calculations.
+# Math is a module for making mathematical operation.
 #
 # Tigonometric functions
 #
