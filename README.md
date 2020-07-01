@@ -1,15 +1,12 @@
-# way
-There is my way of learning of Ruby.
+# My way of learning Ruby.
 
-All files include comments.
+This repository consists of Ruby files with comments.
 
-The main task of commented templates is to be easy-to-understand not only for me,
-but for everyone who opened it and tries to understand.
+The main task is to help to understand common constructs of Ruby, to know the syntax and some of rules of programming.
 
-All templates are based on Ruby Essentials.
-More about Ruby Essentials (https://www.techotopia.com/index.php/Ruby_Essentials).
+Sources
+=
+- Ruby Essentials (https://www.techotopia.com/index.php/Ruby_Essentials);
+- Ruby-Doc (https://ruby-doc.org).
 
-Another source I used is Ruby-Doc.
-More about Ruby-Doc (https://ruby-doc.org).
-
-Best regards! George
+Best regards!
