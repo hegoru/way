@@ -1,40 +1,46 @@
-# Method is a couple of instructions. 
-# In other words: method is a block of commands that executes one-by-one.
+# Method is a block of commands that execute one-by-one.
+# In other words: method is a subprogram that executes commands.
 #
-# Method lets program to avoid repeat lines of code.
+# The main task of methods is to avoid repeating lines of code.
 #
-def check_is_integer value # Converts to an Integer given value
-  value.kind_of? Integer
+# Methods can be with or without parameters.
+# Parameterized methods make manipulations with their given parameter.
+# Non-parameterized methods
+#
+# To use the method it's need to call this.
+#
+def check_is_integer_of value # Declaring of parameterized method
+  value.kind_of? Integer # Returns true if value is integer
 end
 
-puts check_is_integer 2
+puts check_is_integer_of 2 # Method call
 
-# There are few types of methods:
-# Function returns value.
-# Procedure just execute lines of code without return any value.
+# Kinds of method
 #
-def summate_values x, y # Procedure
+# Both of them can be parameterized or not.
+#
+# Functions are always return a value -s.
+# Procedures are only execute their code and return nothing.
+#
+# What is need to be used depends on situation.
+#
+def summate_values x, y # Declaring of the procedure
   sum = x + y
   puts sum
 end
 
-def get_summation_of x, y # Function
+def get_summation_of x, y # Declaring of the function
   return x + y
 end
 
-# Procedure and functions are both using in programming.
-# Using of function or using of procedure depends on situation.
-#
-# There are results of it's execution.
-#
 summate_values 1, 2 # Summates and output calculated value
 
-summation = get_summation_of 1, 2 # Returns result of summation of values
-puts summation
+sum = get_summation_of 1, 2 # Returns result of summation of values
+puts sum
 
 # Alias is another name of the function.
 # Aliases make function names more short, understandable.
 #
-alias is_int check_is_integer # Creates an alias (another name) for the method check_is_integer
+alias is_int check_is_integer_of # Creates an alias (another name) for the method check_is_integer
 
 puts is_int 2.2

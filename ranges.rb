@@ -1,26 +1,53 @@
-# Range represents a subset of anytype values between a start and an end value.
-# 
+# Range is a logical sequence of typed values.
+# In other words: range is a set of values.
 #
-range_of_numbers = 1..10 # Way to declare a range from left and right value
-range_of_digits = 1...10 # Another way to declare a range from left and right value
-
-puts range_of_numbers
-puts range_of_digits
-
-puts range_of_numbers.to_a # Method to convert a range to an array
-
-puts ('a'..'z').to_a # Creates range of characters from 'a' to 'z' converted to array
-
-range_of_words = 'bug'..'bus' # Creates range of strings
-puts range_of_words
-
-# Ruby provides methods to 
+# The value type of range element can be numbers, characters, objects, strings.
 #
-puts range_of_words.min # Returns element of minimum value of range
-puts range_of_words.max # Return maximum value of range
+#
+numbers = 1..10 # Declaring a range of numbers. [1, 10]
+digits = 1...10 # Declaring a range of digits. [1, 10)
 
-puts range_of_words.include?('bum') # Returns boolean word exists in range
-puts range_of_words === 'bum' # Alternative method Returns boolean is value exists in the range
-puts range_of_words.reject { |sub| sub < 'bum' } # Rejects values below a specified range value
+puts numbers
+puts digits
 
-puts range_of_digits === 10 # Returns boolean is value exists in the range
+# There is a special method to_a() to convert range into array.
+#
+print "#{ numbers.to_a }\n" # Converts the range into array
+
+print "#{ ('a'..'z').to_a }\n" # Converts the range of strings into array
+
+# Range of strings
+#
+words = 'bug'..'bus' # Declares range of strings
+
+print "#{ words }\n"
+
+# Ruby provides a few of methods for getting access to range elements.
+#
+puts words.min # Returns the minimal range element
+puts words.max # Returns the maximal range element
+
+puts words.include?('bum') # Returns true if given value exists in range
+puts words == 'bum' # Alternative way Returns true if given value exists
+
+puts words.reject { |sub| sub < 'bum' } # Rejects values below a specified range value
+
+# Using of ranges in case statements (See statements.rb)
+# There is another way of using ranges in conjuction with case statements.
+#
+result = case 40
+when 0..10
+  "Failed"
+when 11..20
+  "Allowed"
+when 21..30
+  "Passed"
+when 31..40
+  "Passed with merit"
+when 41..50
+  "Passed with distinction"
+else
+  "Invalid value"
+end
+
+puts result

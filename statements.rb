@@ -1,58 +1,57 @@
 # As in many other programming languages, there is a way to build logic into code.
-# There are 'if' and 'case' statements.
-# Both of kinds of statements are for logical expressions.
+# Statements were created for this purpose.
+#
+# There are 2 kinds of statements: 'if' and 'case'.
+# And both of them are actively using.
 # 
 # So, now let's play the game.
 # The rules of the game are pretty simple:
-# Computer wishes an Integer number in different ranges.
+# Computer wishes an Integer number in listed range.
 # The main task is to guess the number.
 #
-# There are some methods to provide the game logic. (See methods.rb)
+# There are some methods to provide logic of the game. (See methods.rb)
 #
-# The method generate_number_between_1_and() generates an Integer number between 1
-# and given value randomly. (See random.rb)
+# The method generate_number_between_1_and() generates an Integer between 1 and
+# given value randomly. (See random.rb)
 #
-# The method write_and_convert_to_integer() realised user input and converts it to an Integer.
+# The method get_string_and_convert_to_integer() realizes user input and converts it to an Integer.
 #
-# The 3 lines of code construction realized step-by-step simple logic.
-# From up to down: generate a number -> output the hint -> give an answer of the user.
+# The 3 lines of code construction realize simple logic:
+# generate a number -> output the hint -> write an answer of the user.
 #
 def generate_number_between_1_and value
   return 1 + rand(value)
 end
 
-def write_and_convert_to_integer
+def get_string_and_convert_to_integer
   return gets.chomp.to_i
 end
 
 wished_number = generate_number_between_1_and 5
-puts "I wished a number from 1 to 5. What number is it?"
-number = write_and_convert_to_integer
+puts "I've wished for a number between 1 and 5. Try to guess it."
+user_number = get_string_and_convert_to_integer
 
 # If statement
-# This kind of statement can be used when it's necessary .
+# This kind of statement can be used to check if expression returns true.
 # 
-# 
-if number != wished_number
+# If block
+#
+if user_number != wished_number
   puts "No, my number was #{wished_number}"
 end
 
-# Unless means 'if not'
-# It is much more better for interpreter and for a human who will read the code.
-#
-unless number == wished_number
+unless user_number == wished_number # The best way to use if not
   puts "Actually, my number was #{wished_number}"
 end
 
 wished_number = generate_number_between_1_and 6
 puts "Ok, now I want to wish between 1 and 6. What number is it?"
-number = write_and_convert_to_integer
+user_number = get_string_and_convert_to_integer
 
-# if-else block
-# 
+# If-else block
 #
-if number != wished_number
-  puts "No, my number was #{wished_number}"
+if user_number != wished_number
+  puts "No, my number is #{wished_number}"
 else
   puts "I would say nothing!.. You're right :)"
 end
@@ -61,18 +60,18 @@ end
 # If expression returns true, executes command after ? (question mark) character.
 # In other cases executes command after : (colon) character.
 #
-number == wished_number ? "Nice one!" : "Nope" #
+user_number == wished_number ? "Nice one!" : "Nope" #
 
-wished_number = generate_number_between_1_and 7
-puts "Don't lose a motivation. My number is between 1 and 7. Your answer?"
-number = write_and_convert_to_integer
+wished_user_number = generate_number_between_1_and 7
+puts "Don't hurry up! My number is between 1 and 7. Your answer?"
+user_number = get_string_and_convert_to_integer
 
-# if-elsif-else block
+# If-elsif-else block
 # 
 #
-if number != wished_number
+if user_number != wished_number
   puts "Nope.. It was #{wished_number}."
-elsif !number.kind_of? Integer
+elsif !user_number.kind_of? Integer
   puts "Actually it's not a number"
 else
   puts "Got it!"
@@ -80,17 +79,21 @@ end
 
 wished_number = generate_number_between_1_and 20
 puts "The rules are changed. Now I want to wish a number between 1 and 20. What is my number?"
-number = write_and_convert_to_integer
+user_number = get_string_and_convert_to_integer
 
 # Case statement
-# It can be used for multiple choise.
-# When it is necessary to make a choise from many of var.
+# This type of statements is really useful when it is necessary to process a lot of cases.
+# It should be used for a multiple choise.
 # 
+# Working principle of the case statement is pretty simple:
+# after 'when' to process some case
+# and 'else' to process another case (when).
 #
-# There are no limitations to use when statements.
-# 
+# There is no limitations to use 'when statements'.
 #
-result = case number <=> wished_number
+# It is always necessary to declare 'else'.
+#
+result = case user_number <=> wished_number
 when -1
   "My number is greater than yours: #{wished_number}"
 when 0
@@ -102,3 +105,28 @@ else
 end
 
 puts result
+
+# 
+#
+result = case user_number 
+when 0..4
+  "Somewhere close to 4"
+when 5..11
+  "Bigger than 5 but less than 11"
+when 12..14
+  "12 or 14?"
+when 15..18
+  "Somewhere between 15 and 18"
+when 18..20
+  "Close to 20"
+else
+  "Non-identified"
+end
+
+puts result
+
+# Remember:
+# If it is necessary to process a few of situations - If statement should be used.
+# If there are a more than 3 cases to process - Case statement should be used.
+#
+# By the way: If statement was used in this comment block. :)
