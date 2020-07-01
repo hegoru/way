@@ -1,5 +1,5 @@
 # Array is an ordered collection of any type objects.
-# In other words: array is a collection of any type object.
+# In other words: array is an object for storing any type object.
 #
 days_of_week = Array.new # Way to declare new array using Array class
 print "#{ days_of_week }\n"
