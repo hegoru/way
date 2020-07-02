@@ -10,5 +10,5 @@ Best regards!
 
 Sources
 =
-- Ruby Essentials (https://www.techotopia.com/index.php/Ruby_Essentials);
-- Ruby-Doc (https://ruby-doc.org).
+- [Ruby Essentials](https://www.techotopia.com/index.php/Ruby_Essentials);
+- [Ruby-Doc](https://ruby-doc.org).
