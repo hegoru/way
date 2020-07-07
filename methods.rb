@@ -19,7 +19,7 @@ puts check_is_integer_of 2 # Method call
 #
 # Both of them can be parameterized or not.
 #
-# Functions are always return a value -s.
+# Functions are always return a value(-s).
 # Procedures are only execute their code and return nothing.
 #
 # What is need to be used depends on situation.
@@ -39,7 +39,7 @@ sum = get_summation_of 1, 2 # Returns result of summation of values
 puts sum
 
 # Alias is another name of the function.
-# Aliases make function names more short, understandable.
+# Its main task is to make the name of meththod more useful.
 #
 alias is_int check_is_integer_of # Creates an alias (another name) for the method check_is_integer
 

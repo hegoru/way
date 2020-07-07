@@ -20,7 +20,7 @@ puts "All doors are opened"
 # Using of until
 # 'until' means 'while not'.
 # This is just another form of writing while loop,
-# but it is much more better for interpreter and for somebody, who is reading the code.
+# but it is much better for interpreter and for somebody, who is reading the code.
 #
 opened_doors = 0
 
@@ -29,15 +29,14 @@ until opened_doors == 5 # Also does mean: while opened_doors != 5
   opened_doors += 1
 end
 
-# Loops with fixed number of iterations
-# This kind of loops is using when it is known how many times should do.
 # For loop
+# This kind of loops is using when it is known how many times should do.
 #
 for index in 0..5 do
   puts index
 end
 
-# Nested for loops
+# Nested for loop
 #
 for row in 0..5 do
   for element in 0..5 do
@@ -46,24 +45,24 @@ for row in 0..5 do
   puts
 end
 
-# times
+# Times loop
 #
 10.times {|index| puts index}
 
-# upto
+# Upto loop
 #
 5.upto(10) {|index| puts index}
 
-# Alternative way to use upto loop
+# Alternative way of using upto loop
 #
 5.upto(10) do
   puts "upto is working!"
 end
 
-# downto
+# Downto loop
 15.downto(5) {|index| puts index}
 
-# Alternative way to use downto loop
+# Alternative way of using downto loop
 #
 15.downto(5) do
   puts "downto is working too!"

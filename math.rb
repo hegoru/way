@@ -1,4 +1,4 @@
-# The Math module contains module functions for basic mathematical functions.
+# The Math module contains basic mathematical functions.
 #
 # Trigonometric functions
 #

@@ -1,7 +1,7 @@
 # Range is a logical sequence of typed values.
 # In other words: range is a set of values.
 #
-# The value type of range element can be numbers, characters, objects, strings.
+# The range can contain numbers, characters, objects, strings.
 #
 #
 numbers = 1..10 # Declaring a range of numbers. [1, 10]
@@ -10,17 +10,17 @@ digits = 1...10 # Declaring a range of digits. [1, 10)
 puts numbers
 puts digits
 
-# There is a special method to_a() to convert range into array.
+# There is a special method to_a() for converting into array.
 #
-print "#{ numbers.to_a }\n" # Converts the range into array
+print "#{numbers.to_a}\n" # Converts the range into array
 
-print "#{ ('a'..'z').to_a }\n" # Converts the range of strings into array
+print "#{('a'..'z').to_a}\n" # Converts the range of strings into array
 
 # Range of strings
 #
 words = 'bug'..'bus' # Declares range of strings
 
-print "#{ words }\n"
+print "#{words}\n"
 
 # Ruby provides a few of methods for getting access to range elements.
 #

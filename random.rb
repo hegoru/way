@@ -1,6 +1,6 @@
 # Ruby provides the method rand() for generating numbers randomly.
-# This method generates Integers or floating point numbers.
-#
+# This method generates Integer or Float numbers.
+# 
 #
 puts Random.rand # Way to get a Float between 0 and 1, not including 1 [0;1)
 puts rand # Way to get a Float between 0 and 1, not including 1 [0;1)
@@ -14,8 +14,8 @@ puts rand(5) # Way to get an Integer between 0 and 5, excluding 5 [0;5)
 
 # Negative numbers as given parameters are allowed, but are unsafe.
 #
-puts rand(-5) # Wrong way to get an Integer
-puts rand(-5.5) # Wrong way to get a Float
+puts rand(-5) # Alternative (unsafe) way to get an Integer
+puts rand(-5.5) # Alternative (unsafe) way to get a Float
 
 # Generating in custom ranges
 #
