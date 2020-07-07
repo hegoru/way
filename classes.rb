@@ -3,77 +3,63 @@
 # Class contains it's own methods, variables and properties.
 # The main advantage of class is easy to read by human.
 #
-class BankAccount
-  # Constructor is the method of class
-  # which called once when an object is creating.
-  #
-  # There are few types of the constructors:
-  # parameterized constructor,
-  # default constructor,
-  # copy constructor.
+# Let's declare new class of building (template)
+# What do we know about buildings?
+# They can 
+class Building
+  @@floors = 1
+  # Constructor is a method, which called once when an object is creating.
+  # The usability of constructors is to initializing variables, or doing something when object is created.
   #
   def initialize()
     
   end
+  
+  # Accessors
+  # There are two type of accessors of instance variables in Ruby and
+  # other programming languages.
+  #
+  # Getter provides to read the value of variable, not to change.
+  # Setter provides only to  the value of variable.
+  #
+  def floors # Way to declare getter
+    self.class.floors
+  end
+
+  def self.floors
+    @@floors
+  end
+
+  def floors=(value) # Way to declare setter
+    @@floors = value
+  end
 
   # Class method 
   #
-  def info
-    puts "Bank account was created."
+  def build
+    puts "The building is building.."
   end
-
-  # Getters and setters provide an access to the instance variable.
-  #
-  def number
-    @number
-  end
-
-  # Setter provides an access to the instance variable and sets new value to it.
-  #
-  def number=(value)
-    @number = value
-  end
-
-  # Class variable
-  # 
-  #
-  #
-  def interest_rate
-    @@interest_rate = 0.2
-  end
-
+  
   # Instance method
   #
-  def calculate_interest_from balance
-    balance * interest_rate
+  def calculate_height
+    @@floors * 3.05   
   end
 end
 
 # Now it is possible to declare an object of the class.
 #
-account = BankAccount.new # Define a new object
+some_building = Building.new # Way to declare new object of the class
+puts some_building.floors
+some_building.build
 
-account.info # Call the method
-
-account.number = 100220
-puts account.number
-
-puts BankAccount.interest_rate # Class variable
-
-puts account.calculate_interest_from 5
-
-# Inheritance in Ruby is 
+# Inheritance of classes
+# Inheritance is a strong mechanism, but Ruby supports only single inheritance.
+#
 # Inherited class include all variables, properties and methods of a parent class.
-# In other words: subclass is an extension of parent class with it's own methods.
+# In other words: subclass is an extension of parent class by it's own methods.
 #
-# Ruby supports single inheritance.
 #
-class ModernBankAccount < BankAccount
-  def phone
-    @phone
-  end
-
-  def phone=(value)
-    @phone = value
-  end
+class House < Building
+  @@floors = 1
 end
