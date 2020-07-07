@@ -4,32 +4,26 @@ days_of_week = ["Tue"]
 
 # Adding elements to an array
 # It is really easy to add an element into array in Ruby.
-# There are several ways to do it. 
+# There are several ways to do it.
 #
-days_of_week.push "Wed" # Way to append an element into array
-days_of_week << "Thu" # Alternative way (preferred) to append an element into array
+days_of_week.push "Wed" # Way of array element adding
+days_of_week << "Thu" # Alternative way (preferred) of adding an element into array
+days_of_week.insert(3, "Fri") # Way of array element adding to the listed position
+days_of_week.insert(4, "Sat", "Sun") # Way of adding set of elements into array
+days_of_week.unshift("Mon") # Way of adding an element to the beginning of an array
 
-days_of_week.insert(3, "Fri") # Way to add an element to the listed position into array
-days_of_week.insert(4, "Sat", "Sun") # Way to add a set of elements into array
-
-days_of_week.unshift("Mon") # Way to add an element to the start position of an array
-
-print "#{ days_of_week }\n"
+print "#{days_of_week}\n"
 
 # Removing elements from an array
 #
-days_of_week.pop # Way to remove the last element in an array
+days_of_week.pop # Way of removing the last array element
+days_of_week.delete("Sat") # Way of removing element by its value
+days_of_week.delete_at(4) # Way of removing an element by index
+days_of_week.shift # Way of removing the first element in an array
 
-days_of_week.delete("Sat") # Way to remove an element by value
-days_of_week.delete_at(4) # Way to remove an element by index
-
-days_of_week.shift # Way to remove the first element in an array
-
-print "#{ days_of_week }\n"
+print "#{days_of_week}\n"
 
 # Concatenating of arrays
 # 
-days_of_week = days_of_week + ["Sat", "Sun", "Mon"] # Way to merge two arrays
-days_of_week = days_of_week.concat(["Wed", "Thu"]) # Alternative way (preferred) to concatenate two arrays
-
-print "#{ days_of_week }\n"
+print days_of_week + ["Sat", "Sun", "Mon"] # Way of array concatenating
+print days_of_week.concat(["Wed", "Thu"]) # Alternative way (preferred) of array concatentating
