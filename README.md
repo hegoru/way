@@ -10,8 +10,6 @@ Conclusion
 =
 These files helped me to learn the language, so I wish you found this helpful too.
 
-Best regards!
-
 Sources
 =
 - [Ruby Essentials](https://www.techotopia.com/index.php/Ruby_Essentials/);
@@ -21,4 +19,4 @@ Sources
 
 License
 =
-Do all you need or want with these files.
+Do all you need or want with these files. Use it well!
