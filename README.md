@@ -21,4 +21,4 @@ Sources
 
 License
 =
-Do all you need or you want with these files.
+Do all you need or want with these files.
